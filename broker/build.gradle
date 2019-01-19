@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 19
@@ -18,8 +18,10 @@ android {
 }
 
 dependencies {
-    compile project(':netty_parser')
-    compile 'com.lmax:disruptor:3.3.0'
-    compile 'org.mapdb:mapdb:1.0.6'
+    implementation project(':netty_parser')
+    implementation project(':parser_commons')
+    implementation 'com.lmax:disruptor:3.3.0'
+    implementation 'org.mapdb:mapdb:1.0.6'
+    implementation 'io.netty:netty-all:4.0.25.Final'
 }
 
